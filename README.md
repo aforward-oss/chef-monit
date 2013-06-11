@@ -4,14 +4,6 @@ management tool.
 
 # How to add to your cookbook repository #
 
-## Download the tarball ##
-It's up on the opscode
-[cookbook community](http://community.opscode.com/cookbooks/monit) site.
-
-## Vendor via knife ##
-
-    $ knife cookbook site download monit
-
 ## Track upstream changes via git ##
 I use git submodules for my chef repos so I can push/pull changes with minimal
 hassle.
@@ -21,11 +13,15 @@ For more info, check out the [Pro Git](http://progit.org/book/ch6-6.html) book.
 #### Add the monit repo ####
 
     $ cd YOUR_REPO_ROOT
-    $ git submodule add git://github.com/apsoto/monit.git cookbooks/monit
-
+    $ git submodule add git://github.com/aforward/chef-monit.git cookbooks/monit
 
 History
 =======
+
+2013-06-11
+------------
+Updated to use upstart, and the latest monit 5.5.1
+
 version 0.7.1
 -------------
  * add name to metadata.rb.  Thanks Chulki Lee (https://github.com/chulkilee)
