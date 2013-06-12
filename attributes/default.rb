@@ -24,11 +24,16 @@ default[:monit][:mailserver][:password] = nil
 default[:monit][:mailserver][:password_suffix] = nil
 
 default[:monit][:port] = 3737
-default[:monit][:address] = "localhost"
 default[:monit][:ssl] = false
 default[:monit][:cert] = "/etc/monit/monit.pem"
 default[:monit][:confd_dir] = "/etc/monit/conf.d/"
-default[:monit][:monitrc_file] = "/etc/monit/monitrc"
+default[:monit][:monitrc_file] = "/etc/monitrc"
 default[:monit][:monitdelay_file] = "/etc/monit/monit_delay"
 default[:monit][:bin_file] =  "/usr/sbin/monit"
+
+# To enable external http access, update with domain name or IP
+default[:monit][:address] = "localhost"
+
+# To enable http access, update with username:password
+# (e.g. admin:adm1n )
 default[:monit][:allow] = ["localhost"]
