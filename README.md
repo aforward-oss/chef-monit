@@ -8,8 +8,8 @@ Use a git submodules so that you can monitor changes.
 For more info, check out the [Pro Git](http://progit.org/book/ch6-6.html) book.
 
 ```
-cd YOUR_CHEF_REPO_ROOT
-git submodule add https://github.com/aforward/chef-monit.git cookbooks/monit
+cd YOUR_REPO_ROOT
+git submodule add https://github.com/aforward/chef-monit.git chef/cookbooks/monit
 ```
 
 History
