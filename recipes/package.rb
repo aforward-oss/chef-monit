@@ -1,5 +1,6 @@
 dirname = "monit-#{node[:monit][:version]}"
-filename = "#{dirname}-linux-x64.tar.gz"
+arch = node['kernel']['machine'] =~ /x86_64/ ? "64" : "86"
+filename = "#{dirname}-linux-x#{arch}.tar.gz"
 
 cookbook_file "/tmp/#{filename}" do
   source filename
